@@ -6,8 +6,8 @@ export const authenticate = async (req, res, next) => {
   const { sessionId, accessToken } = req.cookies;
 
   // Перевіряємо наявність кукі
-  if (!accessToken) {
-    throw createHttpError(401, 'Missing access token');
+  if (!sessionId || !accessToken) {
+    throw createHttpError(401, 'Missing session or access token');
   }
 
   // Якщо все ок, шукаємо сесію

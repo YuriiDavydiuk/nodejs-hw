@@ -20,7 +20,7 @@ const PORT = process.env.PORT || 3000;
 app.use(logger); //1. Логер прешим бачить всі запити
 app.use(express.json()); //2. Парсинг JSON-тіла
 app.use(cors()); //3. Дозвіл для запитів з інших доменів
-app.use(cookieParser);
+app.use(cookieParser());
 
 app.use(notesRoutes);
 app.use(authRoutes);
