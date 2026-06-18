@@ -1,5 +1,5 @@
 import crypto from 'crypto';
-import { FIFTEEN_MINUTES, ONE_DAY } from '../constants/time';
+import { FIFTEEN_MINUTES, ONE_DAY } from '../constants/time.js';
 import { Session } from '../models/session';
 
 export const createSession = async (userId) => {
