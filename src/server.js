@@ -11,6 +11,7 @@ import { errorHandler } from './middleware/errorHandler.js';
 
 import notesRoutes from './routes/notesRoutes.js';
 import authRoutes from './routes/authRoutes.js';
+import userRoutes from './routes/userRoutes.js';
 
 import cookieParser from 'cookie-parser';
 
@@ -24,6 +25,7 @@ app.use(cookieParser());
 
 app.use(notesRoutes);
 app.use(authRoutes);
+app.use(userRoutes);
 
 app.use(errors()); //4. Логер помилок бачить всі помилки, які виникають у маршрутах, які обробляються celebrate.
 // Він буде логувати ці помилки, перш ніж вони будуть передані до errorHandler для формування відповіді клієнту.
